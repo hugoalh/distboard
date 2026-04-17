@@ -369,5 +369,5 @@ yarn-debug.log*
 yarn-error.log*
 
 #MARK: {Custom}
-.astro
+.astro/
 dist/
