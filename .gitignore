@@ -137,6 +137,9 @@ Thumbs.db:encryptable
 .alcache/
 .alpackages/
 
+#MARK: AstroJS
+.astro/
+
 #MARK: BowerIO
 bower_components/
 
@@ -369,5 +372,4 @@ yarn-debug.log*
 yarn-error.log*
 
 #MARK: {Custom}
-.astro/
 dist/
