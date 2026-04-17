@@ -1,0 +1,26 @@
+---
+import ComponentFooter from "../components/Footer.astro";
+import ComponentHead from "../components/Head.astro";
+import ComponentHeader from "../components/Header.astro";
+interface Props {
+	lang?: string;
+	title?: string;
+}
+const { lang = "en", title } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+	<ComponentHead title={title}>
+		<slot name="head" />
+	</ComponentHead>
+	<body>
+		<ComponentHeader />
+		<main>
+			<slot>
+				<p>Hello, world!</p>
+			</slot>
+		</main>
+		<ComponentFooter />
+	</body>
+</html>

@@ -1,0 +1,25 @@
+---
+import { buildTimestamp } from "./build.js";
+import ComponentTimebox from "./Timebox.astro";
+const buildTimestampYear = buildTimestamp.getUTCFullYear();
+const copyrightYearsString: string = `2026${buildTimestampYear === 2026 ? "" : `~${buildTimestampYear}`}`;
+---
+
+<footer class="footer">
+	<hr />
+	<p>
+		©️ {copyrightYearsString}
+		<a href="https://github.com/hugoalh" rel="external">hugoalh</a>
+	</p>
+	<p>🕰️ <ComponentTimebox timestamp={buildTimestamp} /></p>
+	<noscript>
+		<p>
+			💡 JavaScript is disabled; Enable JavaScript for a better
+			experience.
+		</p>
+	</noscript>
+	<p>🚧 DistBoard is in development.</p>
+	<p>
+		🏗️ Build with <a href="https://astro.build" rel="external">Astro</a> and ❤️.
+	</p>
+</footer>

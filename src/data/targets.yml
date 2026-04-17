@@ -1,0 +1,251 @@
+deno_lint_rules:
+  name: "Deno Lint Rules"
+  maps:
+    - "github/hugoalh/deno-lint-rules"
+    - "jsr/@hugoalh/deno-lint-rules"
+deno_nodejs_transformer:
+  name: "Deno NodeJS Transformer"
+  maps:
+    - "github/hugoalh/deno-nodejs-transformer"
+    - "jsr/@hugoalh/deno-nodejs-transformer"
+adler32_ecmascript:
+  name: "Adler32 (ECMAScript)"
+  maps:
+    - "github/hugoalh/adler32-es"
+    - "jsr/@hugoalh/adler32"
+    - "npm/@hugoalh/adler32"
+base16_ecmascript:
+  name: "Base16 (ECMAScript)"
+  maps:
+    - "github/hugoalh/base16-es"
+    - "jsr/@hugoalh/base16"
+    - "npm/@hugoalh/base16"
+base32_ecmascript:
+  name: "Base32 (ECMAScript)"
+  maps:
+    - "github/hugoalh/base32-es"
+    - "jsr/@hugoalh/base32"
+    - "npm/@hugoalh/base32"
+base64_ecmascript:
+  name: "Base64 (ECMAScript)"
+  maps:
+    - "github/hugoalh/base64-es"
+    - "jsr/@hugoalh/base64"
+    - "npm/@hugoalh/base64"
+blake_ecmascript:
+  name: "Blake (ECMAScript)"
+  maps:
+    - "github/hugoalh/blake-es"
+    - "jsr/@hugoalh/blake"
+    - "npm/@hugoalh/blake"
+bytes_matcher_ecmascript:
+  name: "Bytes Matcher (ECMAScript)"
+  maps:
+    - "github/hugoalh/bytes-matcher-es"
+    - "jsr/@hugoalh/bytes-matcher"
+djb2a_ecmascript:
+  name: "DJB2a (ECMAScript)"
+  maps:
+    - "github/hugoalh/djb2a-es"
+    - "jsr/@hugoalh/djb2a"
+    - "npm/@hugoalh/djb2a"
+env_ecmascript:
+  name: "Env (ECMAScript)"
+  maps:
+    - "github/hugoalh/env-es"
+    - "jsr/@hugoalh/env"
+    - "npm/@hugoalh/env"
+eol_ecmascript:
+  name: "EOL (ECMAScript)"
+  maps:
+    - "github/hugoalh/eol-es"
+    - "jsr/@hugoalh/eol"
+    - "npm/@hugoalh/eol"
+exfetch_ecmascript:
+  name: "exFetch (ECMAScript)"
+  maps:
+    - "github/hugoalh/exfetch-es"
+    - "jsr/@hugoalh/exfetch"
+    - "npm/@hugoalh/exfetch"
+fnv_ecmascript:
+  name: "Fowler-Noll-Vo (FNV) (ECMAScript)"
+  maps:
+    - "github/hugoalh/fnv-es"
+    - "jsr/@hugoalh/fnv"
+    - "npm/@hugoalh/fnv"
+fs_ecmascript:
+  name: "FS (ECMAScript)"
+  maps:
+    - "github/hugoalh/fs-es"
+    - "jsr/@hugoalh/fs"
+    - "npm/@hugoalh/fs"
+github_actions_core_ecmascript:
+  name: "GitHub Actions Core (ECMAScript)"
+  maps:
+    - "github/hugoalh/github-actions-core-es"
+    - "jsr/@hugoalh/github-actions-core"
+    - "npm/@hugoalh/github-actions-core"
+github_sodium_ecmascript:
+  name: "GitHub Sodium (ECMAScript)"
+  maps:
+    - "github/hugoalh/github-sodium-es"
+    - "jsr/@hugoalh/github-sodium"
+    - "npm/@hugoalh/github-sodium"
+http_header_link_ecmascript:
+  name: "HTTP Header Link (ECMAScript)"
+  maps:
+    - "github/hugoalh/http-header-link-es"
+    - "jsr/@hugoalh/http-header-link"
+    - "npm/@hugoalh/http-header-link"
+http_header_retry_after_ecmascript:
+  name: "HTTP Header Retry After (ECMAScript)"
+  maps:
+    - "github/hugoalh/http-header-retry-after-es"
+    - "jsr/@hugoalh/http-header-retry-after"
+    - "npm/@hugoalh/http-header-retry-after"
+http_header_value_handler_ecmascript:
+  name: "HTTP Header Value Handler (ECMAScript)"
+  maps:
+    - "github/hugoalh/http-header-value-handler-es"
+    - "jsr/@hugoalh/http-header-value-handler"
+    - "npm/@hugoalh/http-header-value-handler"
+is_empty_ecmascript:
+  name: "Is Empty (ECMAScript)"
+  maps:
+    - "github/hugoalh/is-empty-es"
+    - "jsr/@hugoalh/is-empty"
+    - "npm/@hugoalh/is-empty"
+is_json_ecmascript:
+  name: "Is JSON (ECMAScript)"
+  maps:
+    - "github/hugoalh/is-json-es"
+    - "jsr/@hugoalh/is-json"
+    - "npm/@hugoalh/is-json"
+is_numeric_integral_ecmascript:
+  name: "Is Numeric Integral (ECMAScript)"
+  maps:
+    - "github/hugoalh/is-numeric-integral-es"
+    - "jsr/@hugoalh/is-numeric-integral"
+    - "npm/@hugoalh/is-numeric-integral"
+is_numeric_prime_ecmascript:
+  name: "Is Numeric Prime (ECMAScript)"
+  maps:
+    - "github/hugoalh/is-numeric-prime-es"
+    - "jsr/@hugoalh/is-numeric-prime"
+    - "npm/@hugoalh/is-numeric-prime"
+is_object_plain_ecmascript:
+  name: "Is Object Plain (ECMAScript)"
+  maps:
+    - "github/hugoalh/is-object-plain-es"
+    - "jsr/@hugoalh/is-object-plain"
+    - "npm/@hugoalh/is-object-plain"
+is_primitive_ecmascript:
+  name: "Is Primitive (ECMAScript)"
+  maps:
+    - "github/hugoalh/is-primitive-es"
+    - "jsr/@hugoalh/is-primitive"
+    - "npm/@hugoalh/is-primitive"
+is_string_ascii_ecmascript:
+  name: "Is String ASCII (ECMAScript)"
+  maps:
+    - "github/hugoalh/is-string-ascii-es"
+    - "jsr/@hugoalh/is-string-ascii"
+    - "npm/@hugoalh/is-string-ascii"
+is_string_singleline_ecmascript:
+  name: "Is String Single Line (ECMAScript)"
+  maps:
+    - "github/hugoalh/is-string-singleline-es"
+    - "jsr/@hugoalh/is-string-singleline"
+    - "npm/@hugoalh/is-string-singleline"
+nacl_ecmascript:
+  name: "NaCl (ECMAScript)"
+  maps:
+    - "codeberg/hugoalh/nacl-es"
+    - "github/hugoalh/nacl-es"
+    - "jsr/@hugoalh/nacl"
+    - "kaki87/hugoalh/nacl-es"
+    - "npm/@hugoalh/nacl"
+pressure_ecmascript:
+  name: "Pressure (ECMAScript)"
+  maps:
+    - "github/hugoalh/pressure-es"
+    - "jsr/@hugoalh/pressure"
+    - "npm/@hugoalh/pressure"
+process_ecmascript:
+  name: "Process (ECMAScript)"
+  maps:
+    - "github/hugoalh/process-es"
+    - "jsr/@hugoalh/process"
+    - "npm/@hugoalh/process"
+range_iterator_ecmascript:
+  name: "Range Iterator (ECMAScript)"
+  maps:
+    - "github/hugoalh/range-iterator-es"
+    - "jsr/@hugoalh/range-iterator"
+    - "npm/@hugoalh/range-iterator"
+runtime_info_ecmascript:
+  name: "Runtime Info (ECMAScript)"
+  maps:
+    - "github/hugoalh/runtime-info-es"
+    - "jsr/@hugoalh/runtime-info"
+    - "npm/@hugoalh/runtime-info"
+sdbm_ecmascript:
+  name: "SDBM (ECMAScript)"
+  maps:
+    - "github/hugoalh/sdbm-es"
+    - "jsr/@hugoalh/sdbm"
+    - "npm/@hugoalh/sdbm"
+setation_ecmascript:
+  name: "Setation (ECMAScript)"
+  maps:
+    - "github/hugoalh/setation-es"
+    - "jsr/@hugoalh/setation"
+    - "npm/@hugoalh/setation"
+shuffle_array_ecmascript:
+  name: "Shuffle Array (ECMAScript)"
+  maps:
+    - "github/hugoalh/shuffle-array-es"
+    - "jsr/@hugoalh/shuffle-array"
+    - "npm/@hugoalh/shuffle-array"
+sort_ecmascript:
+  name: "Sort (ECMAScript)"
+  maps:
+    - "github/hugoalh/sort-es"
+    - "jsr/@hugoalh/sort"
+    - "npm/@hugoalh/sort"
+string_dissect_ecmascript:
+  name: "String Dissect (ECMAScript)"
+  maps:
+    - "github/hugoalh/string-dissect-es"
+    - "jsr/@hugoalh/string-dissect"
+    - "npm/@hugoalh/string-dissect"
+string_overflow_ecmascript:
+  name: "String Overflow (ECMAScript)"
+  maps:
+    - "github/hugoalh/string-overflow-es"
+    - "jsr/@hugoalh/string-overflow"
+    - "npm/@hugoalh/string-overflow"
+symmetric_crypto_ecmascript:
+  name: "Symmetric Crypto (ECMAScript)"
+  maps:
+    - "github/hugoalh/symmetric-crypto-es"
+    - "jsr/@hugoalh/symmetric-crypto"
+    - "npm/@hugoalh/symmetric-crypto"
+temperature_ecmascript:
+  name: "Temperature (ECMAScript)"
+  maps:
+    - "github/hugoalh/temperature-es"
+    - "jsr/@hugoalh/temperature"
+    - "npm/@hugoalh/temperature"
+unique_array_ecmascript:
+  name: "Unique Array (ECMAScript)"
+  maps:
+    - "github/hugoalh/unique-array-es"
+    - "jsr/@hugoalh/unique-array"
+    - "npm/@hugoalh/unique-array"
+url_regexp_ecmascript:
+  name: "URL RegExp (ECMAScript)"
+  maps:
+    - "github/hugoalh/url-regexp-es"
+    - "jsr/@hugoalh/url-regexp"
+    - "npm/@hugoalh/url-regexp"

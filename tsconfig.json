@@ -1,0 +1,20 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"allowJs": true,
+		"declaration": false,
+		"declarationMap": false,
+		"emitBOM": false,
+		"emitDeclarationOnly": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"outDir": "./dist",
+		"target": "esnext",
+		"verbatimModuleSyntax": true
+	},
+	"include": [
+		"./src"
+	]
+}

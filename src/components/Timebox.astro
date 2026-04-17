@@ -1,0 +1,122 @@
+---
+interface Props {
+	timestamp: Date;
+	wrapEnd?: string;
+	wrapStart?: string;
+}
+const { timestamp, wrapEnd = "", wrapStart = "．" } = Astro.props;
+function padZero(input: number): string {
+	return input.toString().padStart(2, "0");
+}
+const timestampISO: string = timestamp.toISOString();
+const timestampYear: string = timestamp.getUTCFullYear().toString();
+const timestampMonth: string = padZero(timestamp.getUTCMonth() + 1);
+const timestampDate: string = padZero(timestamp.getUTCDate());
+const timestampHours: string = padZero(timestamp.getUTCHours());
+const timestampMinutes: string = padZero(timestamp.getUTCMinutes());
+const timestampSeconds: string = padZero(timestamp.getUTCSeconds());
+
+/*
+The fragment around the element is used as a workaround to avoid a trailing whitespace in the output. See https://github.com/withastro/compiler/issues/1003.
+*/
+---
+
+<>
+	<span
+		class="timebox"
+		data-relative-wrap-end={wrapEnd}
+		data-relative-wrap-start={wrapStart}
+	>
+		<time class="absolute" datetime={timestampISO}
+			>{
+				`${timestampYear}-${timestampMonth}-${timestampDate} ${timestampHours}:${timestampMinutes}:${timestampSeconds} UTC`
+			}</time
+		>
+	</span>
+</>
+<script>
+	if (
+		typeof Intl !== "undefined" &&
+		typeof Intl.RelativeTimeFormat !== "undefined"
+	) {
+		const intlRTF = new Intl.RelativeTimeFormat("en");
+		const timestampCurrent = new Date();
+		async function resolveTimeboxRelative(element: Element): Promise<void> {
+			const wrapEnd: string | null = element.getAttribute(
+				"data-relative-wrap-end",
+			);
+			const wrapStart: string | null = element.getAttribute(
+				"data-relative-wrap-start",
+			);
+			const timestampTarget: Date = new Date(
+				element
+					.querySelector("time.absolute")!
+					.getAttribute("datetime")!,
+			);
+			const tdSeconds: number =
+				(timestampTarget.getTime() - timestampCurrent.getTime()) / 1000;
+			const tdMinutes: number = tdSeconds / 60;
+			const tdHours: number = tdMinutes / 60;
+			const tdDays: number = tdHours / 24;
+			const tdMonths: number = tdDays / 30.4375;
+			const tdYears: number = tdMonths / 12;
+			const domRelativeTime: HTMLTimeElement =
+				document.createElement("time");
+			if (Math.abs(tdSeconds) < 60) {
+				const v: number = Math.ceil(tdSeconds);
+				domRelativeTime.setAttribute("datetime", `PT${Math.abs(v)}S`);
+				domRelativeTime.textContent = intlRTF.format(v, "second");
+			} else if (Math.abs(tdMinutes) < 60) {
+				const v: number = Math.ceil(tdMinutes);
+				domRelativeTime.setAttribute("datetime", `PT${Math.abs(v)}M`);
+				domRelativeTime.textContent = intlRTF.format(v, "minute");
+			} else if (Math.abs(tdHours) < 24) {
+				const v: number = Math.ceil(tdHours);
+				domRelativeTime.setAttribute("datetime", `PT${Math.abs(v)}H`);
+				domRelativeTime.textContent = intlRTF.format(v, "hour");
+			} else if (Math.abs(tdDays) < 30.4375) {
+				const v: number = Math.ceil(tdDays);
+				domRelativeTime.setAttribute("datetime", `P${Math.abs(v)}D`);
+				domRelativeTime.textContent = intlRTF.format(v, "day");
+			} else if (Math.abs(tdMonths) < 12) {
+				domRelativeTime.setAttribute(
+					"datetime",
+					`P${Math.abs(Math.ceil(tdDays))}D`,
+				);
+				domRelativeTime.textContent = intlRTF.format(
+					Math.ceil(tdMonths),
+					"month",
+				);
+			} else {
+				domRelativeTime.setAttribute(
+					"datetime",
+					`P${Math.abs(Math.ceil(tdDays))}D`,
+				);
+				domRelativeTime.textContent = intlRTF.format(
+					Math.ceil(tdYears),
+					"year",
+				);
+			}
+			const domRelative: HTMLSpanElement = document.createElement("span");
+			domRelative.classList.add("relative");
+			if (wrapStart !== null) {
+				domRelative.append(wrapStart);
+			}
+			domRelative.append(domRelativeTime);
+			if (wrapEnd !== null) {
+				domRelative.append(wrapEnd);
+			}
+			element.querySelector("span.relative")?.remove();
+			element.append(domRelative);
+		}
+		try {
+			for (const element of document.querySelectorAll("span.timebox")) {
+				resolveTimeboxRelative(element).catch((error) => {
+					console.warn(error);
+				});
+			}
+		} catch (error) {
+			console.warn(error);
+		}
+	}
+</script>

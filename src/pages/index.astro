@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content";
+import ComponentFooter from "../components/Footer.astro";
+import ComponentHead from "../components/Head.astro";
+const targets = await getCollection("targets");
+---
+
+<!doctype html>
+<html lang="en">
+	<ComponentHead title="Home" />
+	<body>
+		<main>
+			<hgroup>
+				<h1>DistBoard @hugoalh</h1>
+				<p>
+					A self host dashboard for list of <a href="#targets"
+						>projects/softwares</a
+					> distributions and versions.
+				</p>
+			</hgroup>
+			<p>
+				DistBoard is in development, expect bugs and missing features;
+				Pending features are listed in the <a href="#roadmap">Roadmap</a
+				>.
+			</p>
+			<h2 id="targets">Projects/Softwares</h2>
+			<aside>
+				<i
+					>Currently have {targets.length} projects/softwares on the board.</i
+				>
+			</aside>
+			<ul>
+				{
+					targets.map((target) => (
+						<li>
+							<a
+								href={`/target/${target.id.replaceAll(" ", "_").replaceAll("-", "_")}`}
+							>
+								{target.data.name}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+			<h2 id="roadmap">Roadmap</h2>
+			<aside><i>Not in order.</i></aside>
+			<ul>
+				<li>Icon + Logo.</li>
+				<li>Show distribution versions.</li>
+				<li>New interface design (with Fluent or Material).</li>
+				<li>Smooth page transition.</li>
+				<li>Search.</li>
+				<li>Instruction of libraries/packages usage (?).</li>
+				<li>Serve through Astro integration.</li>
+			</ul>
+		</main>
+		<ComponentFooter />
+	</body>
+</html>
+<style>
+	body {
+		grid-template-rows: 1fr auto;
+	}
+</style>

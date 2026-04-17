@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import type { TargetMapFmt } from "../../components/build.js";
+import LayoutTarget from "../../layouts/Target.astro";
+export async function getStaticPaths() {
+	const targets = await getCollection("targets");
+	return targets.map((target) => ({
+		params: { id: target.id.replaceAll(" ", "_").replaceAll("-", "_") },
+		props: {
+			maps: target.data.maps,
+			name: target.data.name,
+		},
+	}));
+}
+interface Props {
+	maps: TargetMapFmt[];
+	name: string;
+}
+const { maps, name } = Astro.props;
+---
+
+<LayoutTarget title={name}>
+	<h1>{name}</h1>
+	<ul>
+		{
+			maps.map(({ hostDisplay, name, url }: TargetMapFmt) => (
+				<li>
+					<a href={url} rel="external">
+						{hostDisplay} <code>{name}</code>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</LayoutTarget>
