@@ -13,3 +13,16 @@ updates:
       separator: "/"
     cooldown:
       default-days: 1
+  - package-ecosystem: "npm"
+    directories:
+      - "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependency 📦"
+      - "nodejs"
+    pull-request-branch-name:
+      separator: "/"
+    versioning-strategy: "increase-if-necessary"
+    cooldown:
+      default-days: 1
