@@ -55,16 +55,12 @@ code {
 	padding-left: 4px;
 	padding-right: 4px;
 	padding-top: 0;
-}
 
-@media (prefers-color-scheme: light) {
-	code {
+	@media (prefers-color-scheme: light) {
 		background-color: #efefef;
 	}
-}
 
-@media (prefers-color-scheme: dark) {
-	code {
+	@media (prefers-color-scheme: dark) {
 		background-color: #2f2f2f;
 	}
 }
@@ -82,11 +78,11 @@ hgroup p {
 footer.footer {
 	font-size: small;
 	width: 100%;
-}
 
-footer.footer p {
-	margin-bottom: 2px;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: 2px;
+	p {
+		margin-bottom: 2px;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: 2px;
+	}
 }
