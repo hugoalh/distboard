@@ -25,7 +25,7 @@ const { maps, name } = Astro.props;
 		{
 			maps.map(({ hostDisplay, name, url }: TargetMapFmt) => (
 				<li>
-					<a href={url} rel="external">
+					<a rel="external" href={url}>
 						{hostDisplay} <code>{name}</code>
 					</a>
 				</li>
