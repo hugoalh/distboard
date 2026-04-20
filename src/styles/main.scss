@@ -9,10 +9,10 @@
 
 :root {
 	font-family: "Noto Sans", "Noto Sans TC", "Noto Sans JP", "Noto Sans KR", "Noto Color Emoji", sans-serif;
-	overscroll-behavior-block: contain;
-	overscroll-behavior-inline: contain;
-	overscroll-behavior-x: contain;
-	overscroll-behavior-y: contain;
+	// overscroll-behavior-block: contain;
+	// overscroll-behavior-inline: contain;
+	// overscroll-behavior-x: contain;
+	// overscroll-behavior-y: contain;
 	scroll-behavior: smooth;
 	tab-size: 4;
 }
@@ -20,7 +20,10 @@
 html {
 	height: 100%;
 	margin: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	padding: 0;
+	scrollbar-gutter: stable;
 	width: 100%;
 }
 
@@ -30,10 +33,7 @@ body {
 	grid-template-rows: auto 1fr auto;
 	margin: 0;
 	min-height: calc(100% - 8px * 2);
-	overflow-x: hidden;
-	overflow-y: scroll;
 	padding: 8px;
-	// scrollbar-gutter: stable;
 	width: calc(100% - 8px * 2);
 }
 
@@ -61,11 +61,11 @@ code {
 	padding-top: 0;
 
 	@media (prefers-color-scheme: light) {
-		background-color: #EFEFEF;
+		background-color: #E8E8E8;
 	}
 
 	@media (prefers-color-scheme: dark) {
-		background-color: #1F1F1F;
+		background-color: #282828;
 	}
 }
 
