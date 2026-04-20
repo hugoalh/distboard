@@ -1,6 +1,6 @@
 ---
 import "../styles/main.scss";
-import ComponentHeadFont from "./HeadFont.astro";
+import ComponentGoogleFont from "./GoogleFont.astro";
 interface Props {
 	ogLang?: string;
 	title?: string;
@@ -16,7 +16,7 @@ const titleFmt: string = `${title.length > 0 ? `${title} | ` : ""}DistBoard @hug
 		name="viewport"
 		content="width=device-width, height=device-height, initial-scale=1.0, interactive-widget=resizes-content, viewport-fit=contain"
 	/>
-	<ComponentHeadFont />
+	<ComponentGoogleFont />
 	<meta name="generator" content={Astro.generator} />
 	<meta name="robots" content="index, follow" />
 	<meta property="og:title" content={titleFmt} />
