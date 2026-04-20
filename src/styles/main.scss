@@ -7,9 +7,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
-* {
+:root {
 	font-family: "Noto Sans", "Noto Sans TC", "Noto Sans JP", "Noto Sans KR", "Noto Color Emoji", sans-serif;
-	overscroll-behavior: contain;
+	overscroll-behavior-block: contain;
+	overscroll-behavior-inline: contain;
+	overscroll-behavior-x: contain;
+	overscroll-behavior-y: contain;
 	scroll-behavior: smooth;
 	tab-size: 4;
 }
@@ -19,9 +22,6 @@ html {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	scrollbar-gutter: stable;
 }
 
 body {
@@ -30,8 +30,8 @@ body {
 	grid-template-rows: auto 1fr auto;
 	margin: 0;
 	min-height: calc(100% - 8px * 2);
-	// overflow-x: hidden;
-	// overflow-y: scroll;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	padding: 8px;
 	// scrollbar-gutter: stable;
 	width: calc(100% - 8px * 2);
@@ -61,11 +61,11 @@ code {
 	padding-top: 0;
 
 	@media (prefers-color-scheme: light) {
-		background-color: #efefef;
+		background-color: #EFEFEF;
 	}
 
 	@media (prefers-color-scheme: dark) {
-		background-color: #2f2f2f;
+		background-color: #0F0F0F;
 	}
 }
 
