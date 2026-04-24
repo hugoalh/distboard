@@ -1,0 +1,81 @@
+---
+type FontDisplay = "auto" | "block" | "fallback" | "optional" | "swap";
+type Props = {
+	[x in FontDisplay]?: string[];
+};
+const {
+	auto = [],
+	block = [],
+	fallback = [],
+	optional = [],
+	swap = [],
+} = Astro.props;
+const autoFmt: string = auto
+	.map((element: string): string => {
+		return `family=${element}`;
+	})
+	.join("&");
+const blockFmt: string = block
+	.map((element: string): string => {
+		return `family=${element}`;
+	})
+	.join("&");
+const fallbackFmt: string = fallback
+	.map((element: string): string => {
+		return `family=${element}`;
+	})
+	.join("&");
+const optionalFmt: string = optional
+	.map((element: string): string => {
+		return `family=${element}`;
+	})
+	.join("&");
+const swapFmt: string = swap
+	.map((element: string): string => {
+		return `family=${element}`;
+	})
+	.join("&");
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+{
+	block.length > 0 && (
+		<link
+			rel="stylesheet"
+			href={`https://fonts.googleapis.com/css2?${blockFmt}&display=block`}
+		/>
+	)
+}
+{
+	swap.length > 0 && (
+		<link
+			rel="stylesheet"
+			href={`https://fonts.googleapis.com/css2?${swapFmt}&display=swap`}
+		/>
+	)
+}
+{
+	auto.length > 0 && (
+		<link
+			rel="stylesheet"
+			href={`https://fonts.googleapis.com/css2?${autoFmt}&display=auto`}
+		/>
+	)
+}
+{
+	fallback.length > 0 && (
+		<link
+			rel="stylesheet"
+			href={`https://fonts.googleapis.com/css2?${fallbackFmt}&display=fallback`}
+		/>
+	)
+}
+{
+	optional.length > 0 && (
+		<link
+			rel="stylesheet"
+			href={`https://fonts.googleapis.com/css2?${optionalFmt}&display=optional`}
+		/>
+	)
+}

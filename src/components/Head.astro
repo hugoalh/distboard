@@ -1,6 +1,6 @@
 ---
 import "../styles/main.scss";
-import ComponentGoogleFont from "./GoogleFont.astro";
+import ComponentGoogleFonts from "./GoogleFonts.astro";
 interface Props {
 	ogLang?: string;
 	title?: string;
@@ -16,7 +16,19 @@ const titleFmt: string = `${title.length > 0 ? `${title} | ` : ""}DistBoard @hug
 		name="viewport"
 		content="width=device-width, height=device-height, initial-scale=1.0, interactive-widget=resizes-content, viewport-fit=contain"
 	/>
-	<ComponentGoogleFont />
+	<ComponentGoogleFonts
+		block={[
+			"Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..200",
+		]}
+		swap={[
+			"Noto+Color+Emoji",
+			"Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900",
+			"Noto+Sans+Mono:wdth,wght@62.5..100,100..900",
+			"Noto+Sans+JP:wght@100..900",
+			"Noto+Sans+KR:wght@100..900",
+			"Noto+Sans+TC:wght@100..900",
+		]}
+	/>
 	<meta name="generator" content={Astro.generator} />
 	<meta name="robots" content="index, follow" />
 	<meta property="og:title" content={titleFmt} />
