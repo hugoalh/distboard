@@ -1,8 +1,6 @@
 export const buildTimestamp: Date = new Date();
-export interface TargetMapFmt {
-	hostDisplay: string;
-	hostSlug: string;
-	name: string;
-	slug: string;
+export interface TargetMapComponent {
+	host?: string;
+	name?: string;
 	url: string;
 }

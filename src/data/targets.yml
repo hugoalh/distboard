@@ -1,251 +1,251 @@
 deno_lint_rules:
   name: "Deno Lint Rules"
   maps:
-    - "github/hugoalh/deno-lint-rules"
-    - "jsr/@hugoalh/deno-lint-rules"
+    - "https://github.com/hugoalh/deno-lint-rules"
+    - "https://jsr.io/@hugoalh/deno-lint-rules"
 deno_nodejs_transformer:
   name: "Deno NodeJS Transformer"
   maps:
-    - "github/hugoalh/deno-nodejs-transformer"
-    - "jsr/@hugoalh/deno-nodejs-transformer"
+    - "https://github.com/hugoalh/deno-nodejs-transformer"
+    - "https://jsr.io/@hugoalh/deno-nodejs-transformer"
 adler32_ecmascript:
   name: "Adler32 (ECMAScript)"
   maps:
-    - "github/hugoalh/adler32-es"
-    - "jsr/@hugoalh/adler32"
-    - "npm/@hugoalh/adler32"
+    - "https://github.com/hugoalh/adler32-es"
+    - "https://jsr.io/@hugoalh/adler32"
+    - "https://www.npmjs.com/@hugoalh/adler32"
 base16_ecmascript:
   name: "Base16 (ECMAScript)"
   maps:
-    - "github/hugoalh/base16-es"
-    - "jsr/@hugoalh/base16"
-    - "npm/@hugoalh/base16"
+    - "https://github.com/hugoalh/base16-es"
+    - "https://jsr.io/@hugoalh/base16"
+    - "https://www.npmjs.com/@hugoalh/base16"
 base32_ecmascript:
   name: "Base32 (ECMAScript)"
   maps:
-    - "github/hugoalh/base32-es"
-    - "jsr/@hugoalh/base32"
-    - "npm/@hugoalh/base32"
+    - "https://github.com/hugoalh/base32-es"
+    - "https://jsr.io/@hugoalh/base32"
+    - "https://www.npmjs.com/@hugoalh/base32"
 base64_ecmascript:
   name: "Base64 (ECMAScript)"
   maps:
-    - "github/hugoalh/base64-es"
-    - "jsr/@hugoalh/base64"
-    - "npm/@hugoalh/base64"
+    - "https://github.com/hugoalh/base64-es"
+    - "https://jsr.io/@hugoalh/base64"
+    - "https://www.npmjs.com/@hugoalh/base64"
 blake_ecmascript:
   name: "Blake (ECMAScript)"
   maps:
-    - "github/hugoalh/blake-es"
-    - "jsr/@hugoalh/blake"
-    - "npm/@hugoalh/blake"
+    - "https://github.com/hugoalh/blake-es"
+    - "https://jsr.io/@hugoalh/blake"
+    - "https://www.npmjs.com/@hugoalh/blake"
 bytes_matcher_ecmascript:
   name: "Bytes Matcher (ECMAScript)"
   maps:
-    - "github/hugoalh/bytes-matcher-es"
-    - "jsr/@hugoalh/bytes-matcher"
+    - "https://github.com/hugoalh/bytes-matcher-es"
+    - "https://jsr.io/@hugoalh/bytes-matcher"
 djb2a_ecmascript:
   name: "DJB2a (ECMAScript)"
   maps:
-    - "github/hugoalh/djb2a-es"
-    - "jsr/@hugoalh/djb2a"
-    - "npm/@hugoalh/djb2a"
+    - "https://github.com/hugoalh/djb2a-es"
+    - "https://jsr.io/@hugoalh/djb2a"
+    - "https://www.npmjs.com/@hugoalh/djb2a"
 env_ecmascript:
   name: "Env (ECMAScript)"
   maps:
-    - "github/hugoalh/env-es"
-    - "jsr/@hugoalh/env"
-    - "npm/@hugoalh/env"
+    - "https://github.com/hugoalh/env-es"
+    - "https://jsr.io/@hugoalh/env"
+    - "https://www.npmjs.com/@hugoalh/env"
 eol_ecmascript:
   name: "EOL (ECMAScript)"
   maps:
-    - "github/hugoalh/eol-es"
-    - "jsr/@hugoalh/eol"
-    - "npm/@hugoalh/eol"
+    - "https://github.com/hugoalh/eol-es"
+    - "https://jsr.io/@hugoalh/eol"
+    - "https://www.npmjs.com/@hugoalh/eol"
 exfetch_ecmascript:
   name: "exFetch (ECMAScript)"
   maps:
-    - "github/hugoalh/exfetch-es"
-    - "jsr/@hugoalh/exfetch"
-    - "npm/@hugoalh/exfetch"
+    - "https://github.com/hugoalh/exfetch-es"
+    - "https://jsr.io/@hugoalh/exfetch"
+    - "https://www.npmjs.com/@hugoalh/exfetch"
 fnv_ecmascript:
   name: "Fowler-Noll-Vo (FNV) (ECMAScript)"
   maps:
-    - "github/hugoalh/fnv-es"
-    - "jsr/@hugoalh/fnv"
-    - "npm/@hugoalh/fnv"
+    - "https://github.com/hugoalh/fnv-es"
+    - "https://jsr.io/@hugoalh/fnv"
+    - "https://www.npmjs.com/@hugoalh/fnv"
 fs_ecmascript:
   name: "FS (ECMAScript)"
   maps:
-    - "github/hugoalh/fs-es"
-    - "jsr/@hugoalh/fs"
-    - "npm/@hugoalh/fs"
+    - "https://github.com/hugoalh/fs-es"
+    - "https://jsr.io/@hugoalh/fs"
+    - "https://www.npmjs.com/@hugoalh/fs"
 github_actions_core_ecmascript:
   name: "GitHub Actions Core (ECMAScript)"
   maps:
-    - "github/hugoalh/github-actions-core-es"
-    - "jsr/@hugoalh/github-actions-core"
-    - "npm/@hugoalh/github-actions-core"
+    - "https://github.com/hugoalh/github-actions-core-es"
+    - "https://jsr.io/@hugoalh/github-actions-core"
+    - "https://www.npmjs.com/@hugoalh/github-actions-core"
 github_sodium_ecmascript:
   name: "GitHub Sodium (ECMAScript)"
   maps:
-    - "github/hugoalh/github-sodium-es"
-    - "jsr/@hugoalh/github-sodium"
-    - "npm/@hugoalh/github-sodium"
+    - "https://github.com/hugoalh/github-sodium-es"
+    - "https://jsr.io/@hugoalh/github-sodium"
+    - "https://www.npmjs.com/@hugoalh/github-sodium"
 http_header_link_ecmascript:
   name: "HTTP Header Link (ECMAScript)"
   maps:
-    - "github/hugoalh/http-header-link-es"
-    - "jsr/@hugoalh/http-header-link"
-    - "npm/@hugoalh/http-header-link"
+    - "https://github.com/hugoalh/http-header-link-es"
+    - "https://jsr.io/@hugoalh/http-header-link"
+    - "https://www.npmjs.com/@hugoalh/http-header-link"
 http_header_retry_after_ecmascript:
   name: "HTTP Header Retry After (ECMAScript)"
   maps:
-    - "github/hugoalh/http-header-retry-after-es"
-    - "jsr/@hugoalh/http-header-retry-after"
-    - "npm/@hugoalh/http-header-retry-after"
+    - "https://github.com/hugoalh/http-header-retry-after-es"
+    - "https://jsr.io/@hugoalh/http-header-retry-after"
+    - "https://www.npmjs.com/@hugoalh/http-header-retry-after"
 http_header_value_handler_ecmascript:
   name: "HTTP Header Value Handler (ECMAScript)"
   maps:
-    - "github/hugoalh/http-header-value-handler-es"
-    - "jsr/@hugoalh/http-header-value-handler"
-    - "npm/@hugoalh/http-header-value-handler"
+    - "https://github.com/hugoalh/http-header-value-handler-es"
+    - "https://jsr.io/@hugoalh/http-header-value-handler"
+    - "https://www.npmjs.com/@hugoalh/http-header-value-handler"
 is_empty_ecmascript:
   name: "Is Empty (ECMAScript)"
   maps:
-    - "github/hugoalh/is-empty-es"
-    - "jsr/@hugoalh/is-empty"
-    - "npm/@hugoalh/is-empty"
+    - "https://github.com/hugoalh/is-empty-es"
+    - "https://jsr.io/@hugoalh/is-empty"
+    - "https://www.npmjs.com/@hugoalh/is-empty"
 is_json_ecmascript:
   name: "Is JSON (ECMAScript)"
   maps:
-    - "github/hugoalh/is-json-es"
-    - "jsr/@hugoalh/is-json"
-    - "npm/@hugoalh/is-json"
+    - "https://github.com/hugoalh/is-json-es"
+    - "https://jsr.io/@hugoalh/is-json"
+    - "https://www.npmjs.com/@hugoalh/is-json"
 is_numeric_integral_ecmascript:
   name: "Is Numeric Integral (ECMAScript)"
   maps:
-    - "github/hugoalh/is-numeric-integral-es"
-    - "jsr/@hugoalh/is-numeric-integral"
-    - "npm/@hugoalh/is-numeric-integral"
+    - "https://github.com/hugoalh/is-numeric-integral-es"
+    - "https://jsr.io/@hugoalh/is-numeric-integral"
+    - "https://www.npmjs.com/@hugoalh/is-numeric-integral"
 is_numeric_prime_ecmascript:
   name: "Is Numeric Prime (ECMAScript)"
   maps:
-    - "github/hugoalh/is-numeric-prime-es"
-    - "jsr/@hugoalh/is-numeric-prime"
-    - "npm/@hugoalh/is-numeric-prime"
+    - "https://github.com/hugoalh/is-numeric-prime-es"
+    - "https://jsr.io/@hugoalh/is-numeric-prime"
+    - "https://www.npmjs.com/@hugoalh/is-numeric-prime"
 is_object_plain_ecmascript:
   name: "Is Object Plain (ECMAScript)"
   maps:
-    - "github/hugoalh/is-object-plain-es"
-    - "jsr/@hugoalh/is-object-plain"
-    - "npm/@hugoalh/is-object-plain"
+    - "https://github.com/hugoalh/is-object-plain-es"
+    - "https://jsr.io/@hugoalh/is-object-plain"
+    - "https://www.npmjs.com/@hugoalh/is-object-plain"
 is_primitive_ecmascript:
   name: "Is Primitive (ECMAScript)"
   maps:
-    - "github/hugoalh/is-primitive-es"
-    - "jsr/@hugoalh/is-primitive"
-    - "npm/@hugoalh/is-primitive"
+    - "https://github.com/hugoalh/is-primitive-es"
+    - "https://jsr.io/@hugoalh/is-primitive"
+    - "https://www.npmjs.com/@hugoalh/is-primitive"
 is_string_ascii_ecmascript:
   name: "Is String ASCII (ECMAScript)"
   maps:
-    - "github/hugoalh/is-string-ascii-es"
-    - "jsr/@hugoalh/is-string-ascii"
-    - "npm/@hugoalh/is-string-ascii"
+    - "https://github.com/hugoalh/is-string-ascii-es"
+    - "https://jsr.io/@hugoalh/is-string-ascii"
+    - "https://www.npmjs.com/@hugoalh/is-string-ascii"
 is_string_singleline_ecmascript:
   name: "Is String Single Line (ECMAScript)"
   maps:
-    - "github/hugoalh/is-string-singleline-es"
-    - "jsr/@hugoalh/is-string-singleline"
-    - "npm/@hugoalh/is-string-singleline"
+    - "https://github.com/hugoalh/is-string-singleline-es"
+    - "https://jsr.io/@hugoalh/is-string-singleline"
+    - "https://www.npmjs.com/@hugoalh/is-string-singleline"
 nacl_ecmascript:
   name: "NaCl (ECMAScript)"
   maps:
-    - "codeberg/hugoalh/nacl-es"
-    - "github/hugoalh/nacl-es"
-    - "jsr/@hugoalh/nacl"
-    - "kaki87/hugoalh/nacl-es"
-    - "npm/@hugoalh/nacl"
+    - "https://codeberg.org/hugoalh/nacl-es"
+    - "https://github.com/hugoalh/nacl-es"
+    - "https://jsr.io/@hugoalh/nacl"
+    - "https://git.kaki87.net/hugoalh/nacl-es"
+    - "https://www.npmjs.com/@hugoalh/nacl"
 pressure_ecmascript:
   name: "Pressure (ECMAScript)"
   maps:
-    - "github/hugoalh/pressure-es"
-    - "jsr/@hugoalh/pressure"
-    - "npm/@hugoalh/pressure"
+    - "https://github.com/hugoalh/pressure-es"
+    - "https://jsr.io/@hugoalh/pressure"
+    - "https://www.npmjs.com/@hugoalh/pressure"
 process_ecmascript:
   name: "Process (ECMAScript)"
   maps:
-    - "github/hugoalh/process-es"
-    - "jsr/@hugoalh/process"
-    - "npm/@hugoalh/process"
+    - "https://github.com/hugoalh/process-es"
+    - "https://jsr.io/@hugoalh/process"
+    - "https://www.npmjs.com/@hugoalh/process"
 range_iterator_ecmascript:
   name: "Range Iterator (ECMAScript)"
   maps:
-    - "github/hugoalh/range-iterator-es"
-    - "jsr/@hugoalh/range-iterator"
-    - "npm/@hugoalh/range-iterator"
+    - "https://github.com/hugoalh/range-iterator-es"
+    - "https://jsr.io/@hugoalh/range-iterator"
+    - "https://www.npmjs.com/@hugoalh/range-iterator"
 runtime_info_ecmascript:
   name: "Runtime Info (ECMAScript)"
   maps:
-    - "github/hugoalh/runtime-info-es"
-    - "jsr/@hugoalh/runtime-info"
-    - "npm/@hugoalh/runtime-info"
+    - "https://github.com/hugoalh/runtime-info-es"
+    - "https://jsr.io/@hugoalh/runtime-info"
+    - "https://www.npmjs.com/@hugoalh/runtime-info"
 sdbm_ecmascript:
   name: "SDBM (ECMAScript)"
   maps:
-    - "github/hugoalh/sdbm-es"
-    - "jsr/@hugoalh/sdbm"
-    - "npm/@hugoalh/sdbm"
+    - "https://github.com/hugoalh/sdbm-es"
+    - "https://jsr.io/@hugoalh/sdbm"
+    - "https://www.npmjs.com/@hugoalh/sdbm"
 setation_ecmascript:
   name: "Setation (ECMAScript)"
   maps:
-    - "github/hugoalh/setation-es"
-    - "jsr/@hugoalh/setation"
-    - "npm/@hugoalh/setation"
+    - "https://github.com/hugoalh/setation-es"
+    - "https://jsr.io/@hugoalh/setation"
+    - "https://www.npmjs.com/@hugoalh/setation"
 shuffle_array_ecmascript:
   name: "Shuffle Array (ECMAScript)"
   maps:
-    - "github/hugoalh/shuffle-array-es"
-    - "jsr/@hugoalh/shuffle-array"
-    - "npm/@hugoalh/shuffle-array"
+    - "https://github.com/hugoalh/shuffle-array-es"
+    - "https://jsr.io/@hugoalh/shuffle-array"
+    - "https://www.npmjs.com/@hugoalh/shuffle-array"
 sort_ecmascript:
   name: "Sort (ECMAScript)"
   maps:
-    - "github/hugoalh/sort-es"
-    - "jsr/@hugoalh/sort"
-    - "npm/@hugoalh/sort"
+    - "https://github.com/hugoalh/sort-es"
+    - "https://jsr.io/@hugoalh/sort"
+    - "https://www.npmjs.com/@hugoalh/sort"
 string_dissect_ecmascript:
   name: "String Dissect (ECMAScript)"
   maps:
-    - "github/hugoalh/string-dissect-es"
-    - "jsr/@hugoalh/string-dissect"
-    - "npm/@hugoalh/string-dissect"
+    - "https://github.com/hugoalh/string-dissect-es"
+    - "https://jsr.io/@hugoalh/string-dissect"
+    - "https://www.npmjs.com/@hugoalh/string-dissect"
 string_overflow_ecmascript:
   name: "String Overflow (ECMAScript)"
   maps:
-    - "github/hugoalh/string-overflow-es"
-    - "jsr/@hugoalh/string-overflow"
-    - "npm/@hugoalh/string-overflow"
+    - "https://github.com/hugoalh/string-overflow-es"
+    - "https://jsr.io/@hugoalh/string-overflow"
+    - "https://www.npmjs.com/@hugoalh/string-overflow"
 symmetric_crypto_ecmascript:
   name: "Symmetric Crypto (ECMAScript)"
   maps:
-    - "github/hugoalh/symmetric-crypto-es"
-    - "jsr/@hugoalh/symmetric-crypto"
-    - "npm/@hugoalh/symmetric-crypto"
+    - "https://github.com/hugoalh/symmetric-crypto-es"
+    - "https://jsr.io/@hugoalh/symmetric-crypto"
+    - "https://www.npmjs.com/@hugoalh/symmetric-crypto"
 temperature_ecmascript:
   name: "Temperature (ECMAScript)"
   maps:
-    - "github/hugoalh/temperature-es"
-    - "jsr/@hugoalh/temperature"
-    - "npm/@hugoalh/temperature"
+    - "https://github.com/hugoalh/temperature-es"
+    - "https://jsr.io/@hugoalh/temperature"
+    - "https://www.npmjs.com/@hugoalh/temperature"
 unique_array_ecmascript:
   name: "Unique Array (ECMAScript)"
   maps:
-    - "github/hugoalh/unique-array-es"
-    - "jsr/@hugoalh/unique-array"
-    - "npm/@hugoalh/unique-array"
+    - "https://github.com/hugoalh/unique-array-es"
+    - "https://jsr.io/@hugoalh/unique-array"
+    - "https://www.npmjs.com/@hugoalh/unique-array"
 url_regexp_ecmascript:
   name: "URL RegExp (ECMAScript)"
   maps:
-    - "github/hugoalh/url-regexp-es"
-    - "jsr/@hugoalh/url-regexp"
-    - "npm/@hugoalh/url-regexp"
+    - "https://github.com/hugoalh/url-regexp-es"
+    - "https://jsr.io/@hugoalh/url-regexp"
+    - "https://www.npmjs.com/@hugoalh/url-regexp"

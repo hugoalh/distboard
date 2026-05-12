@@ -1,89 +1,92 @@
 import { defineCollection } from "astro:content";
 import { file } from "astro/loaders";
 import { z as zod } from "astro/zod";
-import type { TargetMapFmt } from "./components/build.js";
+import type { TargetMapComponent } from "./components/build.js";
 /*
-const zodJSRNamespace = zod.stringFormat("jsr-namespace", /^[\da-z\-]+$/);
 const zodTargetNPMForgejo = zod.stringFormat("target-npm-forgejo", /^(?:@[\da-z\-._~]+?\/)?[\da-z\-._~]+?$/);
 const zodTargetNPMNPM = zod.stringFormat("target-npm-npm", /^(?:@[\da-z\-._~]+?\/)?[\da-z\-._~]+?$/);
 const zodTargetRepository = zod.stringFormat("target-repository", /^[\d\w\-.]+?\/[\d\w\-.]+?(?:\/[\d\w\-.]+?)*$/);
 */
-const zodTargetMapCodeberg = zod.stringFormat("target-codeberg", (item: string): boolean => {
-	const itemSplit: string[] = item.split("/");
-	return (itemSplit.length === 3 && itemSplit[0] === "codeberg");
-}).transform((item: string): TargetMapFmt => {
-	const name: string = item.replace("codeberg/", "");
-	return {
-		hostDisplay: "Codeberg",
-		hostSlug: "codeberg",
-		name,
-		slug: item,
-		url: `https://codeberg.org/${name}`
-	};
+const urlPatternCodeberg = new URLPattern({
+	hostname: "codeberg.org",
+	pathname: "/:owner/:name",
+	protocol: "http{s}?"
 });
-const zodTargetMapGitHub = zod.stringFormat("target-github", (item: string): boolean => {
-	const itemSplit: string[] = item.split("/");
-	return (itemSplit.length === 3 && itemSplit[0] === "github");
-}).transform((item: string): TargetMapFmt => {
-	const name: string = item.replace("github/", "");
-	return {
-		hostDisplay: "GitHub",
-		hostSlug: "github",
-		name,
-		slug: item,
-		url: `https://github.com/${name}`
-	};
+const urlPatternGitHub = new URLPattern({
+	hostname: "github.com",
+	pathname: "/:owner/:name",
+	protocol: "http{s}?"
 });
-const zodTargetMapJSR = zod.stringFormat("target-jsr", (item: string): boolean => {
-	const itemSplit: string[] = item.split("/");
-	return (itemSplit.length === 3 && itemSplit[0] === "jsr");
-}).transform((item: string): TargetMapFmt => {
-	const name: string = item.replace("jsr/", "");
-	return {
-		hostDisplay: "JSR",
-		hostSlug: "jsr",
-		name,
-		slug: item,
-		url: `https://jsr.io/${name}`
-	};
+const urlPatternJSR = new URLPattern({
+	hostname: "jsr.io",
+	pathname: "/:owner(@[\\da-z\\-]+)/:name([\\da-z\\-]+)",
+	protocol: "http{s}?"
 });
-const zodTargetMapKaKi87 = zod.stringFormat("target-kaki87", (item: string): boolean => {
-	const itemSplit: string[] = item.split("/");
-	return (itemSplit.length === 3 && itemSplit[0] === "kaki87");
-}).transform((item: string): TargetMapFmt => {
-	const name: string = item.replace("kaki87/", "");
-	return {
-		hostDisplay: "KaKi87",
-		hostSlug: "kaki87",
-		name,
-		slug: item,
-		url: `https://git.kaki87.net/${name}`
-	};
+const urlPatternKaKi87 = new URLPattern({
+	hostname: "git.kaki87.net",
+	pathname: "/:owner/:name",
+	protocol: "http{s}?"
 });
-const zodTargetMapNPM = zod.stringFormat("target-npm", (item: string): boolean => {
-	const itemSplit: string[] = item.split("/");
-	return (itemSplit.length >= 2 && itemSplit.length <= 3 && itemSplit[0] === "npm");
-}).transform((item: string): TargetMapFmt => {
-	const name: string = item.replace("npm/", "");
-	return {
-		hostDisplay: "NPM",
-		hostSlug: "npm",
-		name,
-		slug: item,
-		url: `https://www.npmjs.com/${name}`
-	};
+const urlPatternNPM = new URLPattern({
+	hostname: "www.npmjs.com",
+	pathname: "/:name((?:@[\\da-z\\-._~]+?\/)?[\\da-z\\-._~]+?)",
+	protocol: "http{s}?"
 });
 export const collections = {
 	targets: defineCollection({
 		loader: file("src/data/targets.yml"),
 		schema: zod.object({
-			maps: zod.array(zod.union([
-				zodTargetMapCodeberg,
-				zodTargetMapGitHub,
-				zodTargetMapJSR,
-				zodTargetMapKaKi87,
-				zodTargetMapNPM
-			])).min(1),
+			maps: zod.array(zod.url({ normalize: true }).transform((item: string): TargetMapComponent => {
+				let bin: URLPatternResult | null;
+				bin = urlPatternCodeberg.exec(item);
+				if (bin !== null) {
+					const name: string = `${bin.pathname.groups.owner!}/${bin.pathname.groups.name!}`;
+					return {
+						host: "Codeberg",
+						name,
+						url: `https://codeberg.org/${name}`
+					};
+				}
+				bin = urlPatternGitHub.exec(item);
+				if (bin !== null) {
+					const name: string = `${bin.pathname.groups.owner!}/${bin.pathname.groups.name!}`;
+					return {
+						host: "GitHub",
+						name,
+						url: `https://github.com/${name}`
+					};
+				}
+				bin = urlPatternJSR.exec(item);
+				if (bin !== null) {
+					const name: string = `${bin.pathname.groups.owner!}/${bin.pathname.groups.name!}`;
+					return {
+						host: "JSR",
+						name,
+						url: `https://jsr.io/${name}`
+					};
+				}
+				bin = urlPatternKaKi87.exec(item);
+				if (bin !== null) {
+					const name: string = `${bin.pathname.groups.owner!}/${bin.pathname.groups.name!}`;
+					return {
+						host: "KaKi87",
+						name,
+						url: `https://git.kaki87.net/${name}`
+					};
+				}
+				bin = urlPatternNPM.exec(item);
+				if (bin !== null) {
+					const name: string = bin.pathname.groups.name!;
+					return {
+						host: "NPM",
+						name,
+						url: `https://www.npmjs.com/${name}`
+					};
+				}
+				return {
+					url: item
+				};
+			})).min(1),
 			name: zod.string()
 		})
 	})
