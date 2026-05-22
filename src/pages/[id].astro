@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import type { TargetMapComponent } from "../../components/build.js";
-import LayoutTarget from "../../layouts/Target.astro";
+import type { TargetMapComponent } from "../components/build.js";
+import LayoutTarget from "../layouts/Target.astro";
 export async function getStaticPaths() {
 	const targets = await getCollection("targets");
 	return targets.map((target) => ({

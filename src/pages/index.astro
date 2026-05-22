@@ -34,7 +34,7 @@ const targets = await getCollection("targets");
 					targets.map((target) => (
 						<li>
 							<a
-								href={`/target/${target.id.replaceAll(" ", "_").replaceAll("-", "_")}`}
+								href={`/${target.id.replaceAll(" ", "_").replaceAll("-", "_")}`}
 							>
 								{target.data.name}
 							</a>
