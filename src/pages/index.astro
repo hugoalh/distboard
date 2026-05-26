@@ -26,7 +26,15 @@ const targets = await getCollection("targets");
 			<h2 id="targets">Projects/Softwares</h2>
 			<aside>
 				<i
-					>Currently have {targets.length} projects/softwares on the board.</i
+					>Currently have {targets.length} projects/softwares with {
+						targets
+							.map((target) => {
+								return target.data.maps.length;
+							})
+							.reduce((accumulator, currentValue) => {
+								return accumulator + currentValue;
+							}, 0)
+					} distributions on the board.</i
 				>
 			</aside>
 			<ul>
