@@ -32,7 +32,7 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 		}),
 		({ pathname }: URLPatternResult): TargetMapComponent => {
 			return {
-				host: "NPM - Codeberg Packages",
+				host: "Codeberg Packages - NPM",
 				name: `${pathname.groups.owner!}/${decodeURIComponent(pathname.groups.name!)}`,
 				url: `https://codeberg.org/${pathname.groups.owner!}/-/packages/npm/${pathname.groups.name!}`
 			};
@@ -61,7 +61,7 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 		}),
 		({ pathname }: URLPatternResult): TargetMapComponent => {
 			return {
-				host: "NPM - GitHub Packages",
+				host: "GitHub Packages - NPM",
 				name: `@${pathname.groups.owner!}/${pathname.groups.package_name!}`,
 				url: `https://github.com/${pathname.groups.owner!}/${pathname.groups.repository_name!}/pkgs/npm/${pathname.groups.package_name!}`
 			};
@@ -105,7 +105,7 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 		}),
 		({ pathname }: URLPatternResult): TargetMapComponent => {
 			return {
-				host: "NPM - KaKi87 Packages",
+				host: "KaKi87 Packages - NPM",
 				name: `${pathname.groups.owner!}/${decodeURIComponent(pathname.groups.name!)}`,
 				url: `https://git.kaki87.net/${pathname.groups.owner!}/-/packages/npm/${pathname.groups.name!}`
 			};

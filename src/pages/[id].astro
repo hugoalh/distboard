@@ -17,34 +17,77 @@ interface Props {
 	name: string;
 }
 const { maps, name } = Astro.props;
+const sorter = new Intl.Collator("en", {
+	caseFirst: "false",
+	ignorePunctuation: false,
+	numeric: true,
+	sensitivity: "variant",
+	usage: "sort",
+});
 ---
 
 <LayoutTarget title={name}>
 	<h1>{name}</h1>
+	<aside>
+		<i>Currently have {maps.length} distributions on the board.</i>
+	</aside>
 	<ul>
 		{
-			maps.map(({ host, name, url }: TargetMapComponent) => {
-				if (
-					typeof host !== "undefined" &&
-					typeof name !== "undefined"
-				) {
-					return (
-						<li>
-							<a rel="external" href={url}>
-								{host} <code>{name}</code>
-							</a>
-						</li>
-					);
-				} else {
-					return (
-						<li>
-							<a rel="external" href={url}>
-								{url}
-							</a>
-						</li>
-					);
-				}
-			})
+			maps
+				.sort(
+					(a: TargetMapComponent, b: TargetMapComponent): number => {
+						if (
+							typeof a.host !== "undefined" &&
+							typeof a.name !== "undefined" &&
+							typeof b.host !== "undefined" &&
+							typeof b.name !== "undefined"
+						) {
+							return sorter.compare(
+								`${a.host}: ${a.name}`,
+								`${b.host}: ${b.name}`,
+							);
+						}
+						if (
+							typeof a.host !== "undefined" &&
+							typeof a.name !== "undefined" &&
+							(typeof b.host === "undefined" ||
+								typeof b.name === "undefined")
+						) {
+							return -1;
+						}
+						if (
+							(typeof a.host === "undefined" ||
+								typeof a.name === "undefined") &&
+							typeof b.host !== "undefined" &&
+							typeof b.name !== "undefined"
+						) {
+							return 1;
+						}
+						return sorter.compare(a.url, b.url);
+					},
+				)
+				.map(({ host, name, url }: TargetMapComponent) => {
+					if (
+						typeof host !== "undefined" &&
+						typeof name !== "undefined"
+					) {
+						return (
+							<li>
+								<a rel="external" href={url}>
+									{host} <code>{name}</code>
+								</a>
+							</li>
+						);
+					} else {
+						return (
+							<li>
+								<a rel="external" href={url}>
+									{url}
+								</a>
+							</li>
+						);
+					}
+				})
 		}
 	</ul>
 </LayoutTarget>

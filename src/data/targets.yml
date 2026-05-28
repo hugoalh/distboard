@@ -1,13 +1,3 @@
-deno_lint_rules:
-  name: "Deno Lint Rules"
-  maps:
-    - "https://github.com/hugoalh/deno-lint-rules"
-    - "https://jsr.io/@hugoalh/deno-lint-rules"
-deno_nodejs_transformer:
-  name: "Deno NodeJS Transformer"
-  maps:
-    - "https://github.com/hugoalh/deno-nodejs-transformer"
-    - "https://jsr.io/@hugoalh/deno-nodejs-transformer"
 adler32_ecmascript:
   name: "Adler32 (ECMAScript)"
   maps:
@@ -43,6 +33,16 @@ bytes_matcher_ecmascript:
   maps:
     - "https://github.com/hugoalh/bytes-matcher-es"
     - "https://jsr.io/@hugoalh/bytes-matcher"
+deno_lint_rules:
+  name: "Deno Lint Rules"
+  maps:
+    - "https://github.com/hugoalh/deno-lint-rules"
+    - "https://jsr.io/@hugoalh/deno-lint-rules"
+deno_nodejs_transformer:
+  name: "Deno NodeJS Transformer"
+  maps:
+    - "https://github.com/hugoalh/deno-nodejs-transformer"
+    - "https://jsr.io/@hugoalh/deno-nodejs-transformer"
 djb2a_ecmascript:
   name: "DJB2a (ECMAScript)"
   maps:
