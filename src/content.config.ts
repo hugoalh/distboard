@@ -15,12 +15,11 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 			pathname: "/:owner/:name",
 			protocol: "http{s}?"
 		}),
-		({ pathname }: URLPatternResult): TargetMapComponent => {
-			const name: string = `${pathname.groups.owner!}/${pathname.groups.name!}`;
+		({ hostname, pathname }: URLPatternResult): TargetMapComponent => {
 			return {
 				host: "Codeberg",
-				name,
-				url: `https://codeberg.org/${name}`
+				name: `${pathname.groups.owner!}/${pathname.groups.name!}`,
+				url: `https://${hostname.input}${pathname.input}`
 			};
 		}
 	],
@@ -30,11 +29,11 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 			pathname: "/:owner/-/packages/npm/:name(@.+%2F.+)",
 			protocol: "http{s}?"
 		}),
-		({ pathname }: URLPatternResult): TargetMapComponent => {
+		({ hostname, pathname }: URLPatternResult): TargetMapComponent => {
 			return {
 				host: "Codeberg Packages - NPM",
 				name: `${pathname.groups.owner!}/${decodeURIComponent(pathname.groups.name!)}`,
-				url: `https://codeberg.org/${pathname.groups.owner!}/-/packages/npm/${pathname.groups.name!}`
+				url: `https://${hostname.input}${pathname.input}`
 			};
 		}
 	],
@@ -44,26 +43,25 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 			pathname: "/:owner/:name",
 			protocol: "http{s}?"
 		}),
-		({ pathname }: URLPatternResult): TargetMapComponent => {
-			const name: string = `${pathname.groups.owner!}/${pathname.groups.name!}`;
+		({ hostname, pathname }: URLPatternResult): TargetMapComponent => {
 			return {
 				host: "GitHub",
-				name,
-				url: `https://github.com/${name}`
+				name: `${pathname.groups.owner!}/${pathname.groups.name!}`,
+				url: `https://${hostname.input}${pathname.input}`
 			};
 		}
 	],
 	[
 		new URLPattern({
 			hostname: "github.com",
-			pathname: "/:owner/:repository_name/pkgs/npm/:package_name",
+			pathname: "/users/:owner/packages/npm/package/:name",
 			protocol: "http{s}?"
 		}),
-		({ pathname }: URLPatternResult): TargetMapComponent => {
+		({ hostname, pathname }: URLPatternResult): TargetMapComponent => {
 			return {
 				host: "GitHub Packages - NPM",
-				name: `@${pathname.groups.owner!}/${pathname.groups.package_name!}`,
-				url: `https://github.com/${pathname.groups.owner!}/${pathname.groups.repository_name!}/pkgs/npm/${pathname.groups.package_name!}`
+				name: `@${pathname.groups.owner!}/${pathname.groups.name!}`,
+				url: `https://${hostname.input}${pathname.input}`
 			};
 		}
 	],
@@ -73,12 +71,11 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 			pathname: "/:owner(@[\\da-z\\-]+)/:name([\\da-z\\-]+)",
 			protocol: "http{s}?"
 		}),
-		({ pathname }: URLPatternResult): TargetMapComponent => {
-			const name: string = `${pathname.groups.owner!}/${pathname.groups.name!}`;
+		({ hostname, pathname }: URLPatternResult): TargetMapComponent => {
 			return {
 				host: "JSR",
-				name,
-				url: `https://jsr.io/${name}`
+				name: `${pathname.groups.owner!}/${pathname.groups.name!}`,
+				url: `https://${hostname.input}${pathname.input}`
 			};
 		}
 	],
@@ -88,12 +85,11 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 			pathname: "/:owner/:name",
 			protocol: "http{s}?"
 		}),
-		({ pathname }: URLPatternResult): TargetMapComponent => {
-			const name: string = `${pathname.groups.owner!}/${pathname.groups.name!}`;
+		({ hostname, pathname }: URLPatternResult): TargetMapComponent => {
 			return {
 				host: "KaKi87",
-				name,
-				url: `https://git.kaki87.net/${name}`
+				name: `${pathname.groups.owner!}/${pathname.groups.name!}`,
+				url: `https://${hostname.input}${pathname.input}`
 			};
 		}
 	],
@@ -103,11 +99,11 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 			pathname: "/:owner/-/packages/npm/:name(@.+%2F.+)",
 			protocol: "http{s}?"
 		}),
-		({ pathname }: URLPatternResult): TargetMapComponent => {
+		({ hostname, pathname }: URLPatternResult): TargetMapComponent => {
 			return {
 				host: "KaKi87 Packages - NPM",
 				name: `${pathname.groups.owner!}/${decodeURIComponent(pathname.groups.name!)}`,
-				url: `https://git.kaki87.net/${pathname.groups.owner!}/-/packages/npm/${pathname.groups.name!}`
+				url: `https://${hostname.input}${pathname.input}`
 			};
 		}
 	],
@@ -117,12 +113,11 @@ const targetsRemap: Map<URLPattern, TargetRemapHandler> = new Map<URLPattern, Ta
 			pathname: "/:name((?:@[\\da-z\\-._~]+?\/)?[\\da-z\\-._~]+?)",
 			protocol: "http{s}?"
 		}),
-		({ pathname }: URLPatternResult): TargetMapComponent => {
-			const name: string = pathname.groups.name!;
+		({ hostname, pathname }: URLPatternResult): TargetMapComponent => {
 			return {
 				host: "NPM",
-				name,
-				url: `https://www.npmjs.com/${name}`
+				name: pathname.groups.name!,
+				url: `https://${hostname.input}${pathname.input}`
 			};
 		}
 	]
