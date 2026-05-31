@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"@astrojs/starlight": "^0.39.2",
-		"astro": "^6.3.7",
+		"astro": "^6.4.2",
 		"astro-relative-links": "^0.4.2",
 		"sass": "^1.100.0"
 	},
