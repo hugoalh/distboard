@@ -1,30 +1,35 @@
 adler32_ecmascript:
   name: "Adler32 (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/adler32-es"
     - "https://github.com/hugoalh/adler32-es"
     - "https://jsr.io/@hugoalh/adler32"
     - "https://www.npmjs.com/@hugoalh/adler32"
 base16_ecmascript:
   name: "Base16 (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/base16-es"
     - "https://github.com/hugoalh/base16-es"
     - "https://jsr.io/@hugoalh/base16"
     - "https://www.npmjs.com/@hugoalh/base16"
 base32_ecmascript:
   name: "Base32 (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/base32-es"
     - "https://github.com/hugoalh/base32-es"
     - "https://jsr.io/@hugoalh/base32"
     - "https://www.npmjs.com/@hugoalh/base32"
 base64_ecmascript:
   name: "Base64 (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/base64-es"
     - "https://github.com/hugoalh/base64-es"
     - "https://jsr.io/@hugoalh/base64"
     - "https://www.npmjs.com/@hugoalh/base64"
 blake_ecmascript:
   name: "Blake (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/blake-es"
     - "https://github.com/hugoalh/blake-es"
     - "https://jsr.io/@hugoalh/blake"
     - "https://www.npmjs.com/@hugoalh/blake"
@@ -46,18 +51,21 @@ deno_nodejs_transformer:
 djb2a_ecmascript:
   name: "DJB2a (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/djb2a-es"
     - "https://github.com/hugoalh/djb2a-es"
     - "https://jsr.io/@hugoalh/djb2a"
     - "https://www.npmjs.com/@hugoalh/djb2a"
 env_ecmascript:
   name: "Env (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/env-es"
     - "https://github.com/hugoalh/env-es"
     - "https://jsr.io/@hugoalh/env"
     - "https://www.npmjs.com/@hugoalh/env"
 eol_ecmascript:
   name: "EOL (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/eol-es"
     - "https://github.com/hugoalh/eol-es"
     - "https://jsr.io/@hugoalh/eol"
     - "https://www.npmjs.com/@hugoalh/eol"
@@ -70,11 +78,12 @@ exfetch_ecmascript:
 fnv_ecmascript:
   name: "Fowler-Noll-Vo (FNV) (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/fnv-es"
     - "https://github.com/hugoalh/fnv-es"
     - "https://jsr.io/@hugoalh/fnv"
     - "https://www.npmjs.com/@hugoalh/fnv"
 fs_ecmascript:
-  name: "FS (ECMAScript)"
+  name: "File System (ECMAScript)"
   maps:
     - "https://github.com/hugoalh/fs-es"
     - "https://jsr.io/@hugoalh/fs"
@@ -148,6 +157,7 @@ is_primitive_ecmascript:
 is_string_ascii_ecmascript:
   name: "Is String ASCII (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/is-string-ascii-es"
     - "https://github.com/hugoalh/is-string-ascii-es"
     - "https://github.com/users/hugoalh/packages/npm/package/is-string-ascii"
     - "https://jsr.io/@hugoalh/is-string-ascii"
@@ -155,6 +165,7 @@ is_string_ascii_ecmascript:
 is_string_singleline_ecmascript:
   name: "Is String Single Line (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/is-string-singleline-es"
     - "https://github.com/hugoalh/is-string-singleline-es"
     - "https://jsr.io/@hugoalh/is-string-singleline"
     - "https://www.npmjs.com/@hugoalh/is-string-singleline"
@@ -184,12 +195,14 @@ process_ecmascript:
 range_iterator_ecmascript:
   name: "Range Iterator (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/range-iterator-es"
     - "https://github.com/hugoalh/range-iterator-es"
     - "https://jsr.io/@hugoalh/range-iterator"
     - "https://www.npmjs.com/@hugoalh/range-iterator"
 runtime_info_ecmascript:
   name: "Runtime Info (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/runtime-info-es"
     - "https://github.com/hugoalh/runtime-info-es"
     - "https://github.com/users/hugoalh/packages/npm/package/runtime-info"
     - "https://jsr.io/@hugoalh/runtime-info"
@@ -197,6 +210,7 @@ runtime_info_ecmascript:
 sdbm_ecmascript:
   name: "SDBM (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/sdbm-es"
     - "https://github.com/hugoalh/sdbm-es"
     - "https://jsr.io/@hugoalh/sdbm"
     - "https://www.npmjs.com/@hugoalh/sdbm"
