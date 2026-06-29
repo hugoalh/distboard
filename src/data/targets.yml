@@ -177,8 +177,6 @@ nacl_ecmascript:
     - "https://github.com/hugoalh/nacl-es"
     - "https://github.com/users/hugoalh/packages/npm/package/nacl"
     - "https://jsr.io/@hugoalh/nacl"
-    - "https://git.kaki87.net/hugoalh/nacl-es"
-    - "https://git.kaki87.net/hugoalh/-/packages/npm/@hugoalh%2Fnacl"
     - "https://www.npmjs.com/@hugoalh/nacl"
 pressure_ecmascript:
   name: "Pressure (ECMAScript)"
