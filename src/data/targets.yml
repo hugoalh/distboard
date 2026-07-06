@@ -2,35 +2,45 @@ adler32_ecmascript:
   name: "Adler32 (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/adler32-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fadler32"
     - "https://github.com/hugoalh/adler32-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/adler32"
     - "https://jsr.io/@hugoalh/adler32"
     - "https://www.npmjs.com/@hugoalh/adler32"
 base16_ecmascript:
   name: "Base16 (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/base16-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fbase16"
     - "https://github.com/hugoalh/base16-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/base16"
     - "https://jsr.io/@hugoalh/base16"
     - "https://www.npmjs.com/@hugoalh/base16"
 base32_ecmascript:
   name: "Base32 (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/base32-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fbase32"
     - "https://github.com/hugoalh/base32-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/base32"
     - "https://jsr.io/@hugoalh/base32"
     - "https://www.npmjs.com/@hugoalh/base32"
 base64_ecmascript:
   name: "Base64 (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/base64-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fbase64"
     - "https://github.com/hugoalh/base64-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/base64"
     - "https://jsr.io/@hugoalh/base64"
     - "https://www.npmjs.com/@hugoalh/base64"
 blake_ecmascript:
   name: "Blake (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/blake-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fblake"
     - "https://github.com/hugoalh/blake-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/blake"
     - "https://jsr.io/@hugoalh/blake"
     - "https://www.npmjs.com/@hugoalh/blake"
 bytes_matcher_ecmascript:
@@ -52,14 +62,18 @@ djb2a_ecmascript:
   name: "DJB2a (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/djb2a-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fdjb2a"
     - "https://github.com/hugoalh/djb2a-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/djb2a"
     - "https://jsr.io/@hugoalh/djb2a"
     - "https://www.npmjs.com/@hugoalh/djb2a"
 env_ecmascript:
   name: "Env (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/env-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fenv"
     - "https://github.com/hugoalh/env-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/env"
     - "https://jsr.io/@hugoalh/env"
     - "https://www.npmjs.com/@hugoalh/env"
 eol_ecmascript:
@@ -201,6 +215,7 @@ runtime_info_ecmascript:
   name: "Runtime Info (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/runtime-info-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fruntime-info"
     - "https://github.com/hugoalh/runtime-info-es"
     - "https://github.com/users/hugoalh/packages/npm/package/runtime-info"
     - "https://jsr.io/@hugoalh/runtime-info"
@@ -209,7 +224,9 @@ sdbm_ecmascript:
   name: "SDBM (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/sdbm-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fsdbm"
     - "https://github.com/hugoalh/sdbm-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/sdbm"
     - "https://jsr.io/@hugoalh/sdbm"
     - "https://www.npmjs.com/@hugoalh/sdbm"
 setation_ecmascript:
@@ -263,6 +280,9 @@ unique_array_ecmascript:
 url_regexp_ecmascript:
   name: "URL RegExp (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/url-regexp-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Furl-regexp"
     - "https://github.com/hugoalh/url-regexp-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/url-regexp"
     - "https://jsr.io/@hugoalh/url-regexp"
     - "https://www.npmjs.com/@hugoalh/url-regexp"
