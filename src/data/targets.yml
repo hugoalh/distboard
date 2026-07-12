@@ -132,24 +132,12 @@ http_header_value_handler_ecmascript:
     - "https://github.com/hugoalh/http-header-value-handler-es"
     - "https://jsr.io/@hugoalh/http-header-value-handler"
     - "https://www.npmjs.com/@hugoalh/http-header-value-handler"
-is_empty_ecmascript:
-  name: "Is Empty (ECMAScript)"
-  maps:
-    - "https://github.com/hugoalh/is-empty-es"
-    - "https://jsr.io/@hugoalh/is-empty"
-    - "https://www.npmjs.com/@hugoalh/is-empty"
 is_json_ecmascript:
   name: "Is JSON (ECMAScript)"
   maps:
     - "https://github.com/hugoalh/is-json-es"
     - "https://jsr.io/@hugoalh/is-json"
     - "https://www.npmjs.com/@hugoalh/is-json"
-is_numeric_integral_ecmascript:
-  name: "Is Numeric Integral (ECMAScript)"
-  maps:
-    - "https://github.com/hugoalh/is-numeric-integral-es"
-    - "https://jsr.io/@hugoalh/is-numeric-integral"
-    - "https://www.npmjs.com/@hugoalh/is-numeric-integral"
 is_numeric_prime_ecmascript:
   name: "Is Numeric Prime (ECMAScript)"
   maps:
@@ -162,12 +150,6 @@ is_object_plain_ecmascript:
     - "https://github.com/hugoalh/is-object-plain-es"
     - "https://jsr.io/@hugoalh/is-object-plain"
     - "https://www.npmjs.com/@hugoalh/is-object-plain"
-is_primitive_ecmascript:
-  name: "Is Primitive (ECMAScript)"
-  maps:
-    - "https://github.com/hugoalh/is-primitive-es"
-    - "https://jsr.io/@hugoalh/is-primitive"
-    - "https://www.npmjs.com/@hugoalh/is-primitive"
 is_string_ascii_ecmascript:
   name: "Is String ASCII (ECMAScript)"
   maps:
@@ -238,12 +220,14 @@ setation_ecmascript:
 shuffle_array_ecmascript:
   name: "Shuffle Array (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/shuffle-array-es"
     - "https://github.com/hugoalh/shuffle-array-es"
     - "https://jsr.io/@hugoalh/shuffle-array"
     - "https://www.npmjs.com/@hugoalh/shuffle-array"
 sort_ecmascript:
   name: "Sort (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/sort-es"
     - "https://github.com/hugoalh/sort-es"
     - "https://jsr.io/@hugoalh/sort"
     - "https://www.npmjs.com/@hugoalh/sort"
@@ -274,6 +258,7 @@ temperature_ecmascript:
 unique_array_ecmascript:
   name: "Unique Array (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/unique-array-es"
     - "https://github.com/hugoalh/unique-array-es"
     - "https://jsr.io/@hugoalh/unique-array"
     - "https://www.npmjs.com/@hugoalh/unique-array"
