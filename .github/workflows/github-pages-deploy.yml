@@ -30,14 +30,30 @@ jobs:
       - name: "Setup NodeJS"
         uses: "actions/setup-node@v6"
         with:
-          node-version: "^24.15.0"
-          check-latest: "true"
-          cache: "npm"
-          package-manager-cache: "true"
-          cache-dependency-path: "package.json"
+          node-version: "^24.18.0"
+          check-latest: true
+      - name: "Get Cache Path"
+        shell: "pwsh"
+        run: |-
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $True
+          [PSCustomObject]$NPMConfig = ConvertFrom-Json -InputObject (
+            npm config list --json |
+              Join-String -Separator "`n"
+          ) -Depth 100
+          Add-Content -LiteralPath $Env:GITHUB_ENV -Value "CDV_NPM_CACHE_PATH_ROOT=$($NPMConfig.cache)" -Confirm:$False -Encoding 'UTF8NoBOM'
+      - name: "Load NPM Cache"
+        uses: "actions/cache/restore@v6"
+        with:
+          key: "${{runner.os}}/NPM/${{github.run_id}}/${{github.run_attempt}}/${{github.job}}"
+          restore-keys: |-
+            ${{runner.os}}/NPM/${{github.run_id}}/${{github.run_attempt}}/
+            ${{runner.os}}/NPM/${{github.run_id}}/
+            ${{runner.os}}/NPM/
+          path: "${{env.CDV_NPM_CACHE_PATH_ROOT}}"
       - name: "Install Dependencies"
         run: |-
-          npm ci
+          npm install
       - name: "Build Pages"
         run: |-
           npm run build
@@ -50,3 +66,9 @@ jobs:
       - name: "Deploy GitHub Pages"
         id: "deployment"
         uses: "actions/deploy-pages@v5"
+      - name: "Save NPM Cache"
+        if: "${{!cancelled()}}"
+        uses: "actions/cache/save@v6"
+        with:
+          key: "${{runner.os}}/NPM/${{github.run_id}}/${{github.run_attempt}}/${{github.job}}"
+          path: "${{env.CDV_NPM_CACHE_PATH_ROOT}}"
