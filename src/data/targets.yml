@@ -80,7 +80,9 @@ eol_ecmascript:
   name: "EOL (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/eol-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Feol"
     - "https://github.com/hugoalh/eol-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/eol"
     - "https://jsr.io/@hugoalh/eol"
     - "https://www.npmjs.com/@hugoalh/eol"
 exfetch_ecmascript:
@@ -93,7 +95,9 @@ fnv_ecmascript:
   name: "Fowler-Noll-Vo (FNV) (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/fnv-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Ffnv"
     - "https://github.com/hugoalh/fnv-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/fnv"
     - "https://jsr.io/@hugoalh/fnv"
     - "https://www.npmjs.com/@hugoalh/fnv"
 fs_ecmascript:
@@ -111,7 +115,10 @@ github_actions_core_ecmascript:
 github_sodium_ecmascript:
   name: "GitHub Sodium (ECMAScript)"
   maps:
+    - "https://codeberg.org/hugoalh/github-sodium-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fgithub-sodium"
     - "https://github.com/hugoalh/github-sodium-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/github-sodium"
     - "https://jsr.io/@hugoalh/github-sodium"
     - "https://www.npmjs.com/@hugoalh/github-sodium"
 http_header_link_ecmascript:
@@ -154,6 +161,7 @@ is_string_ascii_ecmascript:
   name: "Is String ASCII (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/is-string-ascii-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fis-string-ascii"
     - "https://github.com/hugoalh/is-string-ascii-es"
     - "https://github.com/users/hugoalh/packages/npm/package/is-string-ascii"
     - "https://jsr.io/@hugoalh/is-string-ascii"
@@ -162,7 +170,9 @@ is_string_singleline_ecmascript:
   name: "Is String Single Line (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/is-string-singleline-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fis-string-singleline"
     - "https://github.com/hugoalh/is-string-singleline-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/is-string-singleline"
     - "https://jsr.io/@hugoalh/is-string-singleline"
     - "https://www.npmjs.com/@hugoalh/is-string-singleline"
 nacl_ecmascript:
@@ -190,7 +200,9 @@ range_iterator_ecmascript:
   name: "Range Iterator (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/range-iterator-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Frange-iterator"
     - "https://github.com/hugoalh/range-iterator-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/range-iterator"
     - "https://jsr.io/@hugoalh/range-iterator"
     - "https://www.npmjs.com/@hugoalh/range-iterator"
 runtime_info_ecmascript:
@@ -221,7 +233,9 @@ shuffle_array_ecmascript:
   name: "Shuffle Array (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/shuffle-array-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Fshuffle-array"
     - "https://github.com/hugoalh/shuffle-array-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/shuffle-array"
     - "https://jsr.io/@hugoalh/shuffle-array"
     - "https://www.npmjs.com/@hugoalh/shuffle-array"
 sort_ecmascript:
@@ -259,7 +273,9 @@ unique_array_ecmascript:
   name: "Unique Array (ECMAScript)"
   maps:
     - "https://codeberg.org/hugoalh/unique-array-es"
+    - "https://codeberg.org/hugoalh/-/packages/npm/@hugoalh%2Funique-array"
     - "https://github.com/hugoalh/unique-array-es"
+    - "https://github.com/users/hugoalh/packages/npm/package/unique-array"
     - "https://jsr.io/@hugoalh/unique-array"
     - "https://www.npmjs.com/@hugoalh/unique-array"
 url_regexp_ecmascript:
